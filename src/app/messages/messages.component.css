@@ -1,0 +1,32 @@
+div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+button{
+    width: 300px;
+    background-color: #3f525c;
+    border-color: transparent;
+    border-radius: 2px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin: .5rem auto;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+button:hover{
+    background-color: #fff;
+    color: #3f525c;
+    border:solid 2px #3f525c;
+}
+
