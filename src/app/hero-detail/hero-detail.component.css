@@ -13,8 +13,14 @@
     margin-top: 1rem;
 }
 
+.btnWrap{
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 button{
-    width: 200px;
+    width: 100px;
     background-color: #3f525c;
     border-color: transparent;
     border-radius: 2px;
@@ -22,7 +28,7 @@ button{
     text-decoration: none;
     color: #fff;
     text-align: center;
-    margin: 2rem auto;
+    margin: 2rem auto 0;
     box-sizing: border-box;
     transition: .5s;
 }
