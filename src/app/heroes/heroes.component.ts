@@ -8,8 +8,6 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-
-
   heroes: Hero[] = [];
 
   constructor(private heroService: HeroService) {}
@@ -31,6 +29,7 @@ export class HeroesComponent implements OnInit {
         this.heroes.push(hero);
       })
   }
+  //當名字非空時，會利用此名字建立一個英雄物件
   
   delete(hero:  Hero): void {
     this.heroes = this.heroes.filter(h => h !== hero);

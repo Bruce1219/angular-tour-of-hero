@@ -22,7 +22,7 @@ export class InMemoryDataService implements InMemoryDbService {
   }
 
   genId(heroes: Hero[]): number {
-    return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 1;
+    return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;
   }
-
+  //如果陣列有值，提取陣列中id的最大值+1，否則返回11
 }
