@@ -26,20 +26,19 @@ export class HeroService {
     this.messageService.add(`HeroService: ${message}`);
   }
   
-  getHeroes(): Observable<Hero[]> { //陣列
-    return this.http.get<Hero[]>(this.heroesUrl)
-      .pipe(
-        tap(_ => this.log('fetched heroes')),
-        catchError(this.handleError<Hero[]>('getHeroes', []))
-      )
-  }
-
   private handleError <T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
       this.log(`${operation} failed: ${error.message}`);
       return of(result as T);
     }
+  }
+
+  getHeroes(): Observable<Hero[]> { //陣列
+    return this.http.get<Hero[]>(this.heroesUrl)
+      .pipe(
+        catchError(this.handleError<Hero[]>('getHeroes', []))
+      )
   }
 
   getHero(id: number): Observable<Hero> { //物件
